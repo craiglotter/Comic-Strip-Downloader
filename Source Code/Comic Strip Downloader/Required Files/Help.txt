@@ -1,0 +1,26 @@
+You need to add download paths so that this application has something to work with. To do this, click on the Add Download button and fill in all the relevant details. You will be asked to enter the URL that displays the image you want to download, the Title to use for the RSS Feed generator, the actual Image Name to search for in the URL's source code (using * as the wildcard character or + to indicate the break between a string start and end value) and the Prefix to add to the save file name. (You will find an example file to import in the Example folder in the main application folder).
+
+By highlighting an inputted download, you then have the options to edit or delete that download.
+
+You also need to specify the folder to which downloaded images need to be saved in order for the application to function correctly.
+
+The GUI is fairly simple to explain. The Silent checkbox at the top toggles the display of download dialogs during the download cycle operation. The four list boxes display the download items properties, while the long text box displays the save file path. Three labels give you various statistics while the Activity Log and Error Log links give you access to their respective logs. Minimise Application does just that.
+
+The Force Download button allows you to force the Download Cycle to begin, while the Cancel Download cancels the download cycle.
+
+The Help and About menu options call up their respective dialogs.
+
+Under the Menu menu item, you can either export or import a download list and you can generate RSS ASP or Display Web Page ASP code should you wish to run a Web Page or RSS feed on your webserver. You can also minimise and exit the application from this menu as well. A late addition to the menu, Proxy Username/Password, guides you in setting the stored network username and password for use if you are behind a proxy server 'firewall'.
+
+For more advanced users, you will note the inclusion of a Special_Rules.txt file in the application startup folder. You can edit this file to reflect special download URL string replacements, as detailed below:
+
+For example, www.sinfest.net's valid download URL parsed from the homepage shows that the image to be downloaded is at http://sinfest.net/comikaze/comics/2007-10-03.gif. However, this URL is in fact a redirect URL and should actually be http://www.sinfest.net/comikaze/comics/2007-10-03.gif. So in order to affect this string replacement, we add to the Special_Rules.txt file a line with the form of:
+
+http://sinfest.net|http://www.sinfest.net
+
+The '|' character acts as the delimiter and the line simply states "replace all instances of 'http://sinfest.net' with 'http://www.sinfest.net'
+
+Please be careful when adding lines to this file as you might negatively affect all your downloads.
+
+
+-- Last Updated: 28/05/2008 --

@@ -1,0 +1,3 @@
+APPLICATION_NAME=Comic Strip Downloader
+EXECUTABLE=Comic Strip Downloader.exe
+MANIFEST=http://www.commerce.uct.ac.za/Services/CodeUnit/AutoUpdate/Comic Strip Downloader/manifest.xml

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT type="Advanced Installer" version="1.9" modules="professional" RootPath=".">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="CTRLS" Value="3"/>
+    <ROW Property="ProductCode" Value="{871DAD56-4E6B-4C96-8EA4-FE80E82D2251}"/>
+    <ROW Property="ALLUSERS" Value="2"/>
+    <ROW Property="ARPPRODUCTICON" Value="controlPanelIcon.exe"/>
+    <ROW Property="BannerBitmap" Value="installer_background.jpg"/>
+    <ROW Property="DialogBitmap" Value="installer_background_dialog.jpg"/>
+    <ROW Property="Manufacturer" Value="CodeUnit"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductVersion" Value="1.0.0"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{49BD071E-95AB-4388-9E3C-BC78CDEC4866}"/>
+    <ROW Property="ProductName" Value="Comic Strip Downloader"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="Example_DIR" Directory_Parent="TARGETDIR" DefaultDir="Example"/>
+    <ROW Directory="Inputs_DIR" Directory_Parent="TARGETDIR" DefaultDir="Inputs"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" Directory_Parent="" DefaultDir="SourceDir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="Application_Loader.exe" ComponentId="{5F83F0FD-D878-427F-8960-D35770E3B278}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="Application_Loader.exe" FullKeyPath="TARGETDIR\Application_Loader.exe"/>
+    <ROW Component="AutoUpdate.exe" ComponentId="{7CB3C6F9-113D-4558-9964-D281646CC542}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="AutoUpdate.exe" FullKeyPath="TARGETDIR\AutoUpdate.exe"/>
+    <ROW Component="Comic_Strip_Downloader.exe" ComponentId="{0CC8A909-6AD7-44AE-A213-3820D55030B4}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="Comic_Strip_Downloader.exe" FullKeyPath="TARGETDIR\Comic Strip Downloader.exe"/>
+    <ROW Component="Description.txt" ComponentId="{1782F13D-77F4-4BD6-8C13-AD922EABF29A}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="Description.txt" FullKeyPath="TARGETDIR"/>
+    <ROW Component="ComicSD_DL_List20070921.csd" ComponentId="{1FB15C13-3A2C-4467-84BE-E2C38782EBC7}" Directory_="Example_DIR" Attributes="0" Condition="" KeyPath="ComicSD_DL_List20070921.csd" FullKeyPath="TARGETDIR\Example"/>
+    <ROW Component="Inputs.txt" ComponentId="{98431452-0995-40F7-AF52-873207E66D04}" Directory_="Inputs_DIR" Attributes="0" Condition="" KeyPath="Inputs.txt" FullKeyPath="TARGETDIR\Inputs"/>
+    <ROW Component="za.exe" ComponentId="{8C4F7E33-FEE1-43DD-AB5F-29E787CE8036}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="za.exe" FullKeyPath="TARGETDIR\7za.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Feature_Parent="" Title="MainFeature" Description="Description" Display="2" Level="1" Directory_="TARGETDIR" Attributes="0" Components="Application_Loader.exe Comic_Strip_Downloader.exe Description.txt AutoUpdate.exe ComicSD_DL_List20070921.csd Inputs.txt za.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="AutoUpdate.exe" Component_="AutoUpdate.exe" FileName="AutoUp~1.exe|AutoUpdate.exe" Version="" Language="" Attributes="" SourcePath="..\Comic Strip Downloader\Required Files\AutoUpdate.exe" SelfReg="false"/>
+    <ROW File="Splash_Image.jpg" Component_="Inputs.txt" FileName="Splash~1.jpg|Splash_Image.jpg" Version="" Language="" Attributes="" SourcePath="..\Comic Strip Downloader\Required Files\Inputs\Splash_Image.jpg" SelfReg="false"/>
+    <ROW File="ComicSD_DL_List20070921.csd" Component_="ComicSD_DL_List20070921.csd" FileName="ComicS~1.csd|ComicSD_DL_List20070921.csd" Version="" Language="" Attributes="" SourcePath="..\Comic Strip Downloader\Required Files\Example\ComicSD_DL_List20070921.csd" SelfReg="false"/>
+    <ROW File="Help.txt" Component_="Description.txt" FileName="Help.txt" Version="" Language="" Attributes="" SourcePath="..\Comic Strip Downloader\Required Files\Help.txt" SelfReg="false"/>
+    <ROW File="Inputs.txt" Component_="Inputs.txt" FileName="Inputs.txt" Version="" Language="" Attributes="" SourcePath="..\Comic Strip Downloader\Required Files\Inputs\Inputs.txt" SelfReg="false"/>
+    <ROW File="Special_Rules.txt" Component_="Description.txt" FileName="Specia~1.txt|Special_Rules.txt" Version="" Language="" Attributes="" SourcePath="..\Comic Strip Downloader\Required Files\Special_Rules.txt" SelfReg="false"/>
+    <ROW File="za.exe" Component_="za.exe" FileName="7za.exe" Version="" Language="" Attributes="" SourcePath="..\Comic Strip Downloader\Required Files\7za.exe" SelfReg="false"/>
+    <ROW File="Application_Loader.exe" Component_="Application_Loader.exe" FileName="Applic~1.exe|Application_Loader.exe" Version="" Language="" Attributes="" SourcePath="..\Comic Strip Downloader\Required Files\Application_Loader.exe" SelfReg="false"/>
+    <ROW File="Comic_Strip_Downloader.exe" Component_="Comic_Strip_Downloader.exe" FileName="ComicS~1.exe|Comic Strip Downloader.exe" Version="" Language="" Attributes="" SourcePath="..\Comic Strip Downloader\Required Files\Comic Strip Downloader.exe" SelfReg="false"/>
+    <ROW File="Description.txt" Component_="Description.txt" FileName="Descri~1.txt|Description.txt" Version="" Language="" Attributes="" SourcePath="..\Comic Strip Downloader\Required Files\Description.txt" SelfReg="false"/>
+    <ROW File="config.aup" Component_="Description.txt" FileName="config.aup" Version="" Language="" Attributes="" SourcePath="..\Comic Strip Downloader\Required Files\config.aup" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Source="" Target="A higher version of [ProductName] is installed."/>
+    <ROW Action="AI_ViewReadme" Type="194" Source="viewer.exe" Target="[#Description.txt]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="AI_LaunchApp" Type="194" Source="viewer.exe" Target="[#Application_Loader.exe]"/>
+    <ROW Action="SET_TARGETDIR" Type="307" Source="TARGETDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="UpgradeCode" VersionMin="" VersionMax="ProductVersion" Language="" Attributes="1025" Remove=""/>
+    <ROW UpgradeCode="UpgradeCode" VersionMin="ProductVersion" VersionMax="" Language="" Attributes="2" Remove=""/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiMergeModsComponent">
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="Comic_Strip_Downloader" Directory_="SHORTCUTDIR" Name="ComicS~1|Comic Strip Downloader" Component_="Application_Loader.exe" Target="[TARGETDIR]Application_Loader.exe" Arguments="" Description="" Hotkey="0" Icon_="controlPanelIcon.exe" IconIndex="0" ShowCmd="1" WkDir=""/>
+    <ROW Shortcut="AutoUpdate_Comic_Strip_Downloader" Directory_="SHORTCUTDIR" Name="AutoUp~1|AutoUpdate Comic Strip Downloader" Component_="Application_Loader.exe" Target="[TARGETDIR]AutoUpdate.exe" Arguments="force" Description="AutoUpdate" Hotkey="0" Icon_="TARGETDIR_AutoUpdate.exe" IconIndex="0" ShowCmd="1" WkDir=""/>
+    <ROW Shortcut="Uninstall_Comic_Strip_Downloader" Directory_="SHORTCUTDIR" Name="Uninst~1|Uninstall Comic Strip Downloader" Component_="Application_Loader.exe" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Description="" Hotkey="0" Icon_="SystemFolder_msiexec.exe" IconIndex="0" ShowCmd="1" WkDir=""/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="SystemFolder_msiexec.exe" SourcePath="&lt;uninstall.ico&gt;" Index="0"/>
+    <ROW Name="TARGETDIR_AutoUpdate.exe" SourcePath="Images\AutoUpdate.ico" Index="0"/>
+    <ROW Name="controlPanelIcon.exe" SourcePath="Images\Application_Icon.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="installer_background.jpg" SourcePath="Images\installer_background.jpg"/>
+    <ROW Name="installer_background_dialog.jpg" SourcePath="Images\installer_background_dialog.jpg"/>
+    <ROW Name="viewer.exe" SourcePath="&lt;viewer.exe&gt;"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ATTRIBUTE name="Start" value="WelcomeDlg FolderDlg VerifyReadyDlg"/>
+    <ATTRIBUTE name="Progress" value="ProgressDlg"/>
+    <ATTRIBUTE name="End" value="ExitDialog"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiMediaComponent">
+    <ATTRIBUTE name="InstallationType" value="1"/>
+    <ATTRIBUTE name="MediaSize" value="0"/>
+    <ATTRIBUTE name="Compress" value="1"/>
+    <ATTRIBUTE name="Package" value="10"/>
+    <ATTRIBUTE name="PackageName" value="Release\Comic Strip Downloader Installer"/>
+    <ATTRIBUTE name="IconPath" value="Images\Application_Icon.ico?0"/>
+  </COMPONENT>
+</DOCUMENT>

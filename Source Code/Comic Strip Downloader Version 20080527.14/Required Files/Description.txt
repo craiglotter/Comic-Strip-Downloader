@@ -1,0 +1,88 @@
+Comic Strip Downloader
+
+Comic Strip Downloader monitors the URLs you inputted on a hourly basis, checking for image files matching your inputted file mask and then downloading any matches should they not already be downloaded on your system. You can also force the download should you not wish to wait for the download cycle to begin automatically.
+
+Created by Craig Lotter, June 2006
+
+*********************************
+
+Project Details:
+
+Coded in Visual Basic .NET using Visual Studio .NET 2005
+Implements concepts such as threading, file manipulation.
+Level of Complexity: simple
+
+*********************************
+
+Update 20070920.06:
+
+- Slight updates to the User Interface
+- Added Comic Name and Save Prefix fields
+- Added Help and About dialogs
+- Downloaded files are now saved by renaming files with the specified prefix
+- Added RSS ASP code generator (for the http://www.commerce.uct.ac.za server)
+- Saves settings to a plain text file now
+
+*********************************
+
+Update 20071024.07:
+
+- Now downloads images to a temporary directory first, then copies them to the destination directory. This helps avoid an RSS feed call on the download directory to lock the downloading files.
+
+*********************************
+
+Update 20071029.08:
+
+- Downloads comics that retain the same file name from the source site by downloading the file to the temporary directory first, checking its file size against that of the existing file (same name) and renaming the old file if the sizes don't match up.
+- Fixed potential bug where parsed line length may equal 0.
+- Added Special_Rules.txt functionality
+
+*********************************
+
+Update 20071031.09:
+
+- Added sub status bar to inform user of application's current activity during the download cycle
+- Now tests all downloaded files for correct size before releasing them.
+
+*********************************
+
+Update 20071101.10:
+
+- Expanded on Activity logging. More information now recorded.
+
+*********************************
+
+Update 20071115.11:
+
+- Changed application icon
+- Added progress bar to status label
+- Added minimize button to main control box
+
+*********************************
+
+Update 20071122.12:
+
+- Changed file download code in order to accomdate UCT's ISA authentication/cache server
+- Added menu option to allow for easy setting of stored network user name and password (for use with proxies, like UCT's ISA proxy cache server)
+- Added Web Page code generator (for the http://www.commerce.uct.ac.za server)
+
+*********************************
+
+Update 20080223.13:
+
+- Sends notification email on application startup and shutdown
+- Sends daily email report detailing the day's downloads. Any activity and error logs are also attached.
+- Added AutoUpdate menu option
+
+*********************************
+
+Update 20080527.14:
+
+- Added last Comic download result label
+- Now allows download entries to be sorted on any of the download option lists
+- Added download entries counter label
+- Now indicates which download entry number is currently selected
+- Fixed bug in report email. Also added machine information to report email.
+- Added switch to control whether or not notification/report emails are generated
+- Fixed status bar notification when sending email notifications
+- Now uses + character to indicate filename patterns that have a variable number of characters in it. For example pvp1_VARIABLE_.jpg can now be specified as pvp1_+_.jpg
